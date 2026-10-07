@@ -1,14 +1,12 @@
 package com.back
 
 fun main() {
+    val ages = mutableMapOf("Peter" to 24, "Clark" to 30, "Bruce" to 40)
 
-    // list, mutableList
-    val names = mutableListOf("Allice", "Bob", "Charlie")
+    ages["Peter"] = 30
 
-    names.add("David")
-
-    for (name in names) {
-        println("Hello $name")
+    for((key, value) in ages) {
+        println(key)
+        println(value)
     }
-
 }

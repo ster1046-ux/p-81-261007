@@ -1,18 +1,28 @@
 package com.back
 
-fun sayHello(name: String = "Guest") {
-    println("Hello, $name")
-}
+import jdk.internal.vm.vector.VectorSupport.test
 
-fun sayHello2(name: String = "Guest", age: Int) {
-    println("Hello, $name")
+object Singleton {
+
+}
+class test {
+
 }
 
 fun main() {
-    sayHello() // 기본값 사용
-    sayHello("Alice")
 
-    sayHello2(age = 10) // 기본값 사용
-    sayHello2("John", 10)
+    val s1 = Singleton
+    val s2 = Singleton
+
+    println(s1)
+    println(s2)
+    println(s1 === s2)
+
+    val t1 = test()
+    val t2 = test()
+    println(t1)
+    println(t2)
+    println(t1 === t2)
+
 }
 

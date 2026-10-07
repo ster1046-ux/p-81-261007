@@ -1,12 +1,15 @@
 package com.back
 
 fun main() {
-    val ages = mutableMapOf("Peter" to 24, "Clark" to 30, "Bruce" to 40)
 
-    ages["Peter"] = 30
+    val name1: String = "John"
+    val name2: String? = null
 
-    for((key, value) in ages) {
-        println(key)
-        println(value)
+    println(name1.length)
+    if(name2 != null) {
+        println(name2.length)
+
     }
+
+    print(name2?.length ?: "empty name")
 }

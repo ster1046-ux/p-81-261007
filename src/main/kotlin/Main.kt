@@ -1,26 +1,18 @@
 package com.back
 
-fun String.greet() {
-    println("Hello $this")
+fun sayHello(name: String = "Guest") {
+    println("Hello, $name")
 }
 
- // Int List 클래스에 square 확장 함수 추가
-fun List<Int>.square(): List<Int> {
-    val rst = this.map { it * it }
-    return rst
+fun sayHello2(name: String = "Guest", age: Int) {
+    println("Hello, $name")
 }
 
 fun main() {
+    sayHello() // 기본값 사용
+    sayHello("Alice")
 
-    val name: String = "Alice"
-
-    val numbers = listOf(1,2,3,4,5)
-
-    println(numbers.square())
-
-    println(name.length)
-    println(name.uppercase())
-
-    name.greet() // Hello~, Alice
-
+    sayHello2(age = 10) // 기본값 사용
+    sayHello2("John", 10)
 }
+

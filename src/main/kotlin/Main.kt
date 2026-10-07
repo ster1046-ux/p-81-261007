@@ -1,11 +1,26 @@
 package com.back
 
+fun String.greet() {
+    println("Hello $this")
+}
+
+ // Int List 클래스에 square 확장 함수 추가
+fun List<Int>.square(): List<Int> {
+    val rst = this.map { it * it }
+    return rst
+}
+
 fun main() {
 
-    val names = listOf("Alice", "Bob", "Charlie")
+    val name: String = "Alice"
 
-    names.forEach (action = {name -> println(name)}) // 매개변수가 람다로 끝나면 생략가능
-    names.forEach {name -> println(name)} // 매개변수 표현
-    names.forEach {println(it)} // 매개변수 it으로 대체
+    val numbers = listOf(1,2,3,4,5)
+
+    println(numbers.square())
+
+    println(name.length)
+    println(name.uppercase())
+
+    name.greet() // Hello~, Alice
 
 }

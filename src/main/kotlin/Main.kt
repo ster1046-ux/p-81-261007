@@ -1,15 +1,11 @@
 package com.back
 
+import Person
+
 fun main() {
+    val p1 = Person("Alice", 29)
+    val p2 = Person("Alice", 29)
 
-    val name1: String = "John"
-    val name2: String? = null
-
-    println(name1.length)
-    if(name2 != null) {
-        println(name2.length)
-
-    }
-
-    print(name2?.length ?: "empty name")
+    println(p1 == p2) // 자동 생성된 equals() 메서드 사용. ==로 사용해도 된다.
+    println(p1.toString())
 }

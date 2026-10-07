@@ -1,9 +1,15 @@
 package com.back
 
-fun main() {
-   val rst = add(1,2)
-    print(rst)
+class Person(
+    val name: String
+) {
+
+    fun greet() {
+        println("Hello, my name is $name")
+    }
 }
-fun add(a: Int, b: Int): Int {
-    return a + b
+
+fun main() {
+    val p1 = Person("Alice")
+    p1.greet()
 }

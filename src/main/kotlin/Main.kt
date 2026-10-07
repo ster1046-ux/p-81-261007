@@ -8,7 +8,7 @@ fun main() {
         1 -> "monday"
         2 -> "tuesday"
         3 -> "wednesday"
-        else -> "thursday or friday or saturday or monday"
+        else -> "thursday or friday or saturday or sonday"
     }
     println(rst)
 }

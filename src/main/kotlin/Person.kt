@@ -12,4 +12,8 @@ class Person {
     fun init() {
         println("초기화 작업")
     }
+
+    fun getPersonNumber() : Int {
+        return 1234
+    }
 }

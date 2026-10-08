@@ -43,4 +43,15 @@ fun main() {
         .also { println("Before : $it") }
         .map {it * 2}
         .also { println("After : $it") }
+
+    val p3 = Person()
+
+    val rst3 = p3.run {
+        this.name = "Bob"
+        age = 20
+        init()
+        greet()
+        getPersonNumber()
+    }
+    println(rst)
 }

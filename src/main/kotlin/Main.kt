@@ -2,10 +2,25 @@ package com.back
 
 fun main() {
 
-    val obj: Any = "Hello World"
+    val name: String? = "hello"
 
-    if(obj is String){
-        println(obj.length)
+    val rst = name?.let {
+        println(it)
+        it.length
     }
+
+    println(rst)
+
+
+    val p = Person().apply {
+        // 객체를 받아서
+        this.name = "John"
+        age = 20
+        init()
+
+        // 객체 반환
+    }
+
+    p.greet()
 
 }

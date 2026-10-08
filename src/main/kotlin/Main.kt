@@ -2,9 +2,8 @@ package com.back
 
 fun main() {
 
-   val names = listOf("Alice", "Bob", "Charlie")
+   val name: String? = "John"
 
-    names
-        .map{ "hello ${it}"}
-        .forEach{println(it)}
+   println(name ?: "no name")
+
 }

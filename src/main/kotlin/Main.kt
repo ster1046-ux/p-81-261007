@@ -2,8 +2,10 @@ package com.back
 
 fun main() {
 
-   val name: String? = "John"
+    val obj: Any = "Hello World"
 
-   println(name ?: "no name")
+    if(obj is String){
+        println(obj.length)
+    }
 
 }

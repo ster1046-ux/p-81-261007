@@ -1,16 +1,18 @@
 package com.back
 
-class MathUtils {
-    companion object {
-        val PI = 3.14
-        fun square(x: Int): Int {
-            return x * x
-        }
+open class Animal{
+    open fun makeSound() {
+        println("Some generic animal sound")
     }
 }
-
-fun main() {
-    MathUtils.PI
-    MathUtils.square(2)
-
+class Dog : Animal(){
+    override fun makeSound() {
+        println("bark bark!")
+    }
 }
+fun main() {
+    val d = Dog()
+
+    d.makeSound()
+}
+

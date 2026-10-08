@@ -1,18 +1,27 @@
 package com.back
 
-open class Animal{
-    open fun makeSound() {
-        println("Some generic animal sound")
+open class Animal {
+    open fun eat() {
+        println("Animal is eating")
     }
 }
-class Dog : Animal(){
-    override fun makeSound() {
-        println("bark bark!")
+
+
+interface Pet {
+    fun play() {
+        println("Animal is playing")
     }
 }
+
+class Dog : Animal(), Pet {
+    override fun play() {
+    }
+
+    override fun eat() {
+
+    }
+}
+
 fun main() {
-    val d = Dog()
 
-    d.makeSound()
 }
-
